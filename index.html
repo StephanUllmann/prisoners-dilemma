@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚨</text></svg>">
+  <link rel="stylesheet" href="src/style.css">
+  <script type="module" src="src/app.js"></script>
+  <title>Prisoner's Dilemma</title>
+</head>
+
+<body>
+  <h1>Prisoner's Dilemma</h1>
+  <p>Some explanation Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quod ratione rem veritatis. Iste
+    expedita eveniet hic corporis. At, voluptatem reiciendis. Eveniet deserunt ratione quae reiciendis provident
+    repellendus.</p>
+
+  <div class="actions">
+    <button id="attack">Attack</button>
+    <button id="cooperate">Cooperate</button>
+  </div>
+
+  <div class="rounds">
+    <h2>Round <span id="round-nr">1</span></h2>
+    <div>
+      <h3>Player's Choice</h3>
+      <div class="round-indicators" id="rounds-player">
+        <div class="round round--a"></div>
+        <div class="round round--c"></div>
+        <div class="round"></div>
+      </div>
+    </div>
+    <div>
+      <h3>Opponent's Choice</h3>
+      <div class="round-indicators" id="rounds-opponent">
+        <div class="round round--a"></div>
+        <div class="round round--c"></div>
+        <div class="round"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="points">
+    <h2>Your Points: <span id="points-player">0</span></h2>
+    <h2>Opponents Points: <span id="points-opponent">0</span></h2>
+    <div id="result"></div>
+  </div>
+
+  <button id="reset">Reset</button>
+  <select name="stance" id="stance">
+    <option value="random">Random</option>
+    <option value="titForTat">Retaliating</option>
+    <option value="friendly">Friendly</option>
+    <option value="aggressive">Aggressive</option>
+    <option value="butcher">Butcher</option>
+    <option value="trickster">Trickster</option>
+  </select>
+
+</body>
+
+</html>

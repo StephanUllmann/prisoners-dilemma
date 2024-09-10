@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-block: 2rem;
+}
+
+p {
+  max-width: 60ch;
+}
+
+.actions {
+  max-width: 60ch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  button {
+    text-transform: capitalize;
+    padding-block: 1.25rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: black;
+  }
+  #attack {
+    background-color: palevioletred;
+  }
+  #cooperate {
+    background-color: palegreen;
+  }
+}
+
+.rounds {
+  & > div {
+    margin-block: 0.75rem;
+  }
+  h3 {
+    margin-block: 0.25rem;
+  }
+  .round-indicators {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .round {
+    width: 2rem;
+    aspect-ratio: 1;
+    background-color: slategray;
+    border-radius: 50%;
+    clip-path: circle(50%);
+    transition: background-color 250ms ease;
+    color: black;
+    display: grid;
+    place-content: center;
+  }
+  .round--a {
+    background-color: palevioletred;
+  }
+  .round--c {
+    background-color: palegreen;
+  }
+}
